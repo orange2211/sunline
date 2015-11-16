@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundone"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f8f8f8" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="[dp2101]个人存款账户开户"
+            android:textColor="#555555"
+            android:textSize="27sp" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_channel"
+            style="@style/tab_menu_item"
+            android:textColor="#000000"
+            android:checked="true"
+            android:text="基本信息" />
+
+        <RadioButton
+            android:id="@+id/rb_message"
+            style="@style/tab_menu_item"
+            android:text="计息信息"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/rb_better"
+            style="@style/tab_menu_item"
+             android:textColor="#000000"
+            android:text="辅助信息" />
+
+        <RadioButton
+            android:id="@+id/rb_setting"
+            style="@style/tab_menu_item"
+            android:textColor="#000000"
+            android:text="指定账户" />
+    </RadioGroup>
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    >
+		<LinearLayout
+		    android:id="@+id/lay_btn" 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:layout_alignParentBottom="true"
+		    android:gravity="center"
+		    android:paddingTop="10dp"
+		    android:paddingBottom="10dp"
+		    >
+		    <Button 
+		        android:text="利率试算"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/bg_btn"
+		        />
+		    <Button 
+		        android:text="确认"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/bg_btn"
+		        android:layout_marginLeft="10dp"
+		        />
+		    <Button 
+		        android:text="取消"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/bg_btn"
+		        android:layout_marginLeft="10dp"
+		        />
+		</LinearLayout>
+	    <android.support.v4.view.ViewPager
+	        android:id="@+id/viewpager"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent" 
+	        android:layout_above="@id/lay_btn"/>
+	</RelativeLayout>
+</LinearLayout>
